@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="btnStart"
+        android:text="@string/start"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:onClick="btnStop"
+        android:text="@string/stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="dinh.example.project1.WheelFragment"
+        android:layout_width="412dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="331dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStop" />
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
+        app:srcCompat="?attr/actionBarDivider" />
+
+    <ImageView
+        android:id="@+id/imageViewCloud"
+        android:layout_width="108dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart"
+        app:srcCompat="@drawable/cloud_1" />
+
+    <ImageView
+        android:id="@+id/imageViewSun"
+        android:layout_width="110dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="39dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewBird"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCloud"
+        app:srcCompat="@drawable/sun3f" />
+
+    <ImageView
+        android:id="@+id/imageViewBird"
+        android:layout_width="117dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="204dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewSun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/birds_1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/name"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnStop"
+        app:layout_constraintStart_toEndOf="@+id/btnStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
